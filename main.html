@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<title>Two bandits problem</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="app">
+  <div id = "introduction">
+      <h1>The two bandits problem </h1>
+	<ul>
+		<li> There are two slot machines with different (unknown!) probabilites of winning.</li>
+		<li>You win if both slots show the same symbol.</li>
+		<li>You can pull the slot machines 10 times in total.</li> 
+	</ul>
+    	<p>What is the best strategy to maximise your wins? Try it!</p>
+    </div>
+<div id = "score_board" class="boxes">
+Tries: <dev id= "tries">0</dev>/10 Wins : <dev id= "wins">0</dev>/10
+</div>
+
+
+<div id="info_section" style="display: none;" class = "introduction">
+    <h2>Game Over!</h2>
+    <p>Did you figure out which slot machine had the better probability?</p>
+    <ul>
+        <li>Try different strategies next time!</li>
+        <li>Do you have problems with the same principle in your business?</li>
+        <li>Hope you had some fun :D</li>
+    </ul>
+  <p>Probability of winning for left machine: <span id="proba_left"></span> </p>
+  <p>Probability of winning for right machine: <span id="proba_right"></span> </p>
+</div>
+
+
+<div id = "spinners">
+<div id="left_spinner" class="slot_machine">
+
+<div class = "funText">
+  <p>Slot Machine!</p>
+</div>
+
+  <div class="doors" id = "left_doors">
+    <div class="door" >
+      <div class="boxes">
+        <!-- <div class="box">?</div> -->
+      </div>
+    </div>
+
+    <div class="door">
+      <div class="boxes">
+        <!-- <div class="box">?</div> -->
+      </div>
+    </div>
+    <div class="machine">
+        <div class="lever">
+            <div class="knob" id="spinner_left" ></div>
+        </div>
+    </div>
+  </div>
+  <div class = "funText" style="font-size: 10px;">
+      <p>Pull the lever </p>
+  </div>
+</div>
+
+<div id="right_spinner" class="slot_machine">
+<div class = "funText">
+  <p>Slot Machine!</p>
+</div>
+
+  <div class="doors" id = "right_doors">
+    <div class="door">
+      <div class="boxes">
+        <!-- <div class="box">?</div> -->
+      </div>
+    </div>
+
+    <div class="door">
+      <div class="boxes">
+        <!-- <div class="box">?</div> -->
+      </div>
+    </div>
+    <div class="machine">
+        <div class="lever">
+            <div class="knob" id="spinner_right" ></div>
+        </div>
+    </div>
+  </div>
+
+  <div class = "funText" style="font-size: 10px;">
+      <p>Pull the lever </p>
+  </div>
+
+</div>
+
+</div>
+<div id = "introduction">
+      <p>This problem arises in every situation where new ideas have to simultaneously be explored and exploited.</p>
+<p>How to use that to improve your business? Hit me up, I can present you some ideas: <a href="mailto:bernhard@eisvogel.net">Mail me</a>.</p> 
+</div>
+
+
+</body>
+<script src="function.js"></script>
+</html>

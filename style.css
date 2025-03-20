@@ -1,0 +1,162 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #1a2b45;
+}
+
+a {
+  Color: gray;
+}
+
+#introduction {
+  color: white;
+  margin: 1rem 2rem 0rem 2rem;
+}
+
+#app {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#info_section {
+  padding: 5px;
+  width: 50%;
+  height: 50%;
+  background: white;
+  color:black;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.doors {
+  display: flex;
+}
+
+.door {
+  background: #fafafa;
+  width: 100px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#spinners {
+    display: flex;
+    align-items: center; /* Vertically centers */
+    justify-content: center; /* Horizontally centers (optional) */
+    margin: 0rem;
+}
+
+.slot_machine {
+    align-items: center;
+    margin: 2rem;
+    spacing: 1rem;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00, #ff0000);
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.funText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00, #ff0000);
+    background-size: 400% 400%;
+    animation: funBackground 4s infinite alternate;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    padding: 0px 5px 0px 5px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-weight: bold; /* Make it stand out */
+    text-transform: uppercase; /* Fun capitalization */
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8), 0px 0px 20px rgba(255, 0, 255, 0.8); /* Glow effect */
+    letter-spacing: 3px; /* Spaced-out letters */
+    transform: rotate(-2deg); /* Slight rotation for fun effect */
+}
+
+@keyframes funBackground {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.boxes {
+  /* transform: translateY(0); */
+  transition: transform 1s ease-in-out;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+
+
+#score_board {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: white;
+  margin: 1rem;
+}
+
+
+.info {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.machine {
+    position: relative;
+}
+
+.lever {
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 150px;
+    background: linear-gradient(180deg, #888, #333);
+    border-radius: 10px;
+    transform-origin: top center;
+    transition: transform 0.2s ease-out;
+    border: 2px solid black;
+}
+
+.knob {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.lever.pull {
+    animation: pullLever 0.5s ease-in-out forwards;
+}
+
+@keyframes pullLever {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-40deg); }
+    100% { transform: rotate(0deg); }
+}
