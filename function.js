@@ -10,8 +10,8 @@
   const right_doors = document.querySelectorAll('#right_doors > .door');
   const wins =  document.querySelector('#wins');
   const tries =  document.querySelector('#tries');
-  const probaLeft = 0.2 + Math.random() * 0.5;
-  const probaRight = 0.3 + Math.random() * 0.5;
+  const probaLeft = 0.45 + Math.random() * 0.3;
+  const probaRight = 0.45 + Math.random() * 0.3;
 
   document.getElementById("proba_left").innerHTML = Math.floor(100*probaLeft)/100;
   document.getElementById("proba_right").innerHTML = Math.floor(100*probaRight)/100;
